@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>The collection</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<table class="table table-striped">
+	<tr>
+		<th>The name</th>
+		<th>The eyes</th>
+		<th>The job</th>
+		<th>A thing</th>
+	</tr>
+	<tr th:each = "man : ${men}">
+		<td th:text="${man.etunimi}"></td>
+		<td th:text="${man.silmat}"></td>
+		<td th:text=${man.ammatti}"></td>
+		<td th:text="${man.huomio}"></td>
+	</tr>
+</table>
+<a href="/add" class="btn btn-primary">Add a man</a>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Another for the books</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div>
+	<form th:object="${man}" th:action="@{save}" action="#" method="post">
+		<label for="etunimi">The name</label>
+		<input type="text" id="etunimi" th:field="*{etunimi}" />
+		<label for="silmat">Silmät</label>
+		<input type="text" id="silmat" th:field="*{silmat}" />
+		<label for="ammatti">Ammatti</label>
+		<input type="text" th:field="*{ammatti}" />
+		<label for="huomio">Huomio</label>
+		<input type="text" th:field="*{huomio}" />
+		<input type="submit" value="Save"></input>
+	</form>
+</div>
+
+</body>
+</html>
