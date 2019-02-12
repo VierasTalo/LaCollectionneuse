@@ -5,5 +5,5 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ManRepository extends CrudRepository <Man, Long> {
-	List<Man> findByFirstName(String etunimi);
+	List<Man> findByetunimi(String etunimi);
 }

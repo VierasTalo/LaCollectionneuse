@@ -16,8 +16,8 @@ public class ManController {
 	
 	@RequestMapping(value="/men")
 	public String manList(Model model) {
-		model.addAttribute("men", repository.findAll());
-		return "manList";
+		model.addAttribute("manList", repository.findAll());
+		return "men";
 	}
 	
 	@RequestMapping(value="/add")
@@ -29,6 +29,6 @@ public class ManController {
 	@RequestMapping(value="/save", method = RequestMethod.POST)
 	public String save(Man man) {
 		repository.save(man);
-		return "redirect:manList";
+		return "redirect:men";
 	}
 }

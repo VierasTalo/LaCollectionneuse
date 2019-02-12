@@ -13,10 +13,10 @@
 		<th>The job</th>
 		<th>A thing</th>
 	</tr>
-	<tr th:each = "man : ${men}">
+	<tr th:each = "man : ${manList}">
 		<td th:text="${man.etunimi}"></td>
 		<td th:text="${man.silmat}"></td>
-		<td th:text=${man.ammatti}"></td>
+		<td th:text="${man.ammatti}"></td>
 		<td th:text="${man.huomio}"></td>
 	</tr>
 </table>

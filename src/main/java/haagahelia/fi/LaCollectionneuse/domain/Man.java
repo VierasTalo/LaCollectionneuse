@@ -4,8 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="Miehet")
 public class Man {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -14,6 +16,27 @@ public class Man {
 	private String silmat;
 	private String ammatti;
 	private String huomio;
+	
+	public Man(Long mies_id, String etunimi, String silmat, String ammatti, String huomio) {
+		super();
+		this.mies_id = mies_id;
+		this.etunimi = etunimi;
+		this.silmat = silmat;
+		this.ammatti = ammatti;
+		this.huomio = huomio;
+	}
+	public Man(String etunimi, String silmat, String ammatti, String huomio) {
+		super();
+		this.etunimi = etunimi;
+		this.silmat = silmat;
+		this.ammatti = ammatti;
+		this.huomio = huomio;
+	}
+	public Man() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
 	public Long getMies_id() {
 		return mies_id;
 	}
@@ -44,25 +67,7 @@ public class Man {
 	public void setHuomio(String huomio) {
 		this.huomio = huomio;
 	}
-	public Man(Long mies_id, String etunimi, String silmat, String ammatti, String huomio) {
-		super();
-		this.mies_id = mies_id;
-		this.etunimi = etunimi;
-		this.silmat = silmat;
-		this.ammatti = ammatti;
-		this.huomio = huomio;
-	}
-	public Man(String etunimi, String silmat, String ammatti, String huomio) {
-		super();
-		this.etunimi = etunimi;
-		this.silmat = silmat;
-		this.ammatti = ammatti;
-		this.huomio = huomio;
-	}
-	public Man() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	
 	@Override
 	public String toString() {
 		return "Man [mies_id=" + mies_id + ", etunimi=" + etunimi + ", silmat=" + silmat + ", ammatti=" + ammatti
