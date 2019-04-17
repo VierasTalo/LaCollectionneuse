@@ -13,11 +13,13 @@
 		<th>The job</th>
 		<th>A thing</th>
 	</tr>
-	<tr th:each = "man : ${manList}">
+	<!-- Jokaista Thymeleafin löytämää objektia kohden toteutetaan koko taulukkolitania -->
+	<tr th:each = "man : ${men}">
 		<td th:text="${man.etunimi}"></td>
 		<td th:text="${man.silmat}"></td>
 		<td th:text="${man.ammatti}"></td>
 		<td th:text="${man.huomio}"></td>
+		<td><a th:href="@{/delete/{id}(id=${man.mies_id})}">Delete</a></td>
 	</tr>
 </table>
 <a href="/add" class="btn btn-primary">Add a man</a>

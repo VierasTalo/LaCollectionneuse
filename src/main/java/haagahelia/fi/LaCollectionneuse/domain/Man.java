@@ -4,12 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
-
+//Entity eli taulukkoon ajettava luokka
 @Entity
-@Table(name="Miehet")
 public class Man {
+	//Id viittaa siihen että seuraava arvo (tässä tapauksessa mies_id) on tämän luokan pääasiallinen viiteavain
 	@Id
+	//GeneratedValue luo ID-arvon automaattisesti SQL:n PK-avaimen tapaan
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long mies_id;
 	private String etunimi;

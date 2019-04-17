@@ -6,6 +6,7 @@
 </head>
 <body>
 <div>
+	<!-- Thymeleafin objekti, jossa $ ilmaistaan muuttujia, @linkkejä (tässä yhteydessä th:action@save viittaa tallennustoimintoon ManControllerissa -->
 	<form th:object="${man}" th:action="@{save}" action="#" method="post">
 		<label for="etunimi">The name</label>
 		<input type="text" id="etunimi" th:field="*{etunimi}" />
